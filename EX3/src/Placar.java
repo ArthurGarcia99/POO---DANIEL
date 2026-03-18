@@ -11,23 +11,22 @@ public class Placar{
     }
 
     public void registrarPonto(String time, int tipo){
-        if(time == "casa"){
-            if(tipo == 1){
-                this.pontosCasa+= 1;
-            }else if(tipo == 2){
-                this.pontosCasa+= 2;
-            }else if(tipo == 3){
-                this.pontosCasa+= 3;
-            }
-        }else if(time == "visitante"){
-            if(tipo == 1){
-                this.pontosVisitante+= 1;
-            }else if(tipo == 2){
-                this.pontosVisitante+= 2;
-            }else if(tipo == 3){
-                this.pontosVisitante+= 3;
-            }
+        if (periodoQuarto > 4){
+            System.out.println("Jogo já Terminou!");
+            return;
         }
+
+        if(tipo != 1 && tipo != 2 && tipo != 3){
+            System.out.println("Tipo de ponto invalido!");
+            return;
+        }
+
+        if(time.equalsIgnoreCase("casa")){
+            this.pontosCasa += tipo;
+        }else if(time.equalsIgnoreCase("visitante")){
+            this.pontosVisitante += tipo;
+        }
+
     }
 
     public void proximoQuarto(){

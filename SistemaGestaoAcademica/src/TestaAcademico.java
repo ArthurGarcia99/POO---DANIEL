@@ -13,7 +13,7 @@ public class TestaAcademico {
 
         Avaliacao prova = dis1.getAvaliacoes().get(0);
 
-        prova.adicionarQuestao(1, "Explicar concenito de classe.", 2.0f);
+        prova.adicionarQuestao(1, "Explicar conceito de classe.", 2.0f);
         prova.adicionarQuestao(2, "O que é encapsulamento?", 3.0f);
         prova.adicionarQuestao(3, "Explique como instanciar um objeto.", 5.0f);
 

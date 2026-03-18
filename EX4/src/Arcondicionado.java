@@ -8,9 +8,9 @@ public class Arcondicionado{
 
     public Arcondicionado(String marca, String modelo, int temperatura, boolean ligado){
         setMarca(marca);
-        setModelo(modelo);
+        this.modelo = modelo;
         setTemperatura(temperatura);
-        setLigado(ligado);
+        this.ligado = ligado;
     }
 
     public void setMarca(String marca){
@@ -21,10 +21,6 @@ public class Arcondicionado{
         }
     }
 
-    public void setModelo(String modelo){
-        this.modelo = modelo;
-    }
-
     public void setTemperatura(int temperatura){
         if(temperatura >= 16 && temperatura <= 30) {
             this.temperatura = temperatura;
@@ -33,13 +29,19 @@ public class Arcondicionado{
         }
     }
 
+    public boolean isLigado(){
+        return ligado;
+    }
+
     public void setLigado(boolean ligado){
         this.ligado = ligado;
     }
 
     public void ativarModoTurbo(){
-        if(verificarCompressor()){
-            setTemperatura(16);
+        if(this.ligado) {
+            if (verificarCompressor()) {
+                setTemperatura(16);
+            }
         }
     }
 
@@ -61,5 +63,4 @@ public class Arcondicionado{
                 "\nModelo: " + this.modelo +
                 "\nTemperatura: " + this.temperatura;
     }
-
 }

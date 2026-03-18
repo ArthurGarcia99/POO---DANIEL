@@ -6,11 +6,13 @@ public class Disciplina {
     private ArrayList<Aluno> alunos;
     private ArrayList<Avaliacao> avaliacoes;
 
+    // agregação
     public void matricularAluno(Aluno a){
         this.alunos.add(a);
         System.out.println("Aluno matriculado com sucesso.");
     }
 
+    // composição
     public void criarAvaliacao(int id, String nome){
         Avaliacao aux = new Avaliacao(id, nome);
         this.avaliacoes.add(aux);
@@ -38,24 +40,12 @@ public class Disciplina {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public String getProfessor() {
         return professor;
-    }
-
-    public void setProfessor(String professor) {
-        this.professor = professor;
     }
 
     @Override

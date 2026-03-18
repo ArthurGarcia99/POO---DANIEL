@@ -5,6 +5,7 @@ public class Avaliacao {
     private String nome;
     private ArrayList<Questao> Questoes;
 
+    // composição
     public void adicionarQuestao(int num, String texto, float peso){
         Questao aux = new Questao(num, texto, peso);
         this.Questoes.add(aux);
@@ -27,14 +28,6 @@ public class Avaliacao {
 
     public String getNome() {
         return nome;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     @Override
