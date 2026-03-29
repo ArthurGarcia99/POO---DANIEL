@@ -1,3 +1,5 @@
+package EX2;
+
 public class Pleno extends Desenvolvedor{
     private int projEntr;
 
@@ -36,3 +38,4 @@ public class Pleno extends Desenvolvedor{
         return super.calcularBonus() + this.salarioBase * 0.15f;
     }
 }
+

@@ -1,3 +1,5 @@
+package EX2;
+
 public class Junior extends Desenvolvedor {
     private String mentor;
 
@@ -31,3 +33,4 @@ public class Junior extends Desenvolvedor {
         System.out.println("Junior desenvolvendo código com mentoria de " + this.mentor);
     }
 }
+

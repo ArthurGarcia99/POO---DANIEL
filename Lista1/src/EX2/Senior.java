@@ -1,3 +1,5 @@
+package EX2;
+
 public class Senior extends Desenvolvedor{
     private float verbaLider;
 
@@ -37,3 +39,4 @@ public class Senior extends Desenvolvedor{
     }
 
 }
+

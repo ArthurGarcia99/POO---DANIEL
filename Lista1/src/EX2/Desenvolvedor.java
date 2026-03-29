@@ -1,3 +1,5 @@
+package EX2;
+
 public class Desenvolvedor{
     protected String nome, linguagem;
     protected  float salarioBase;
