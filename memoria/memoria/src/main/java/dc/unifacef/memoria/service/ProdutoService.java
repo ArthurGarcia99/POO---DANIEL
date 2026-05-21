@@ -25,4 +25,25 @@ public class ProdutoService {
         this.produtos.add(produto);
         return produto;
     }
+
+    //remove um produto com id
+    public boolean remove(long id){
+        //a funcao removeif faz o pra gente
+        //para cada produto p, se o id do produto é igual ao id dos produtos do vetor
+        return this.produtos.removeIf(produto -> produto.getId().equals(id));
+    }
+
+    //atualiza um produto por id
+    public Produto atualiza(Long id, Produto novo){
+        novo.setId(id);
+        // percorre para atualizar o produto
+        for(int i=0;i<this.produtos.size();i++){
+            if (this.produtos.get(i).getId().equals(id)){
+                // encontrei
+                this.produtos.set(i, novo); // atualizado
+                return novo;
+            }
+        }
+        return null; // produto não encontrado para atualizar
+    }
 }
